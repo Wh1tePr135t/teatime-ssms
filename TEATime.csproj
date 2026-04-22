@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net481</TargetFramework>
     <OutputType>Library</OutputType>
     <RootNamespace>TEATime</RootNamespace>
     <AssemblyName>TEATime</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- SSMS References - Update paths based on your SSMS installation -->
-    <!-- Default: C:\Program Files (x86)\Microsoft SQL Server Management Studio 20\Common7\IDE\Extensions\Microsoft\SSMS -->
-    <Reference Include="Microsoft.SqlServer.Management.UI.Grid" />
-    <Reference Include="Microsoft.SqlServer.Management.UI.RSHost" />
-    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc" />
-    <Reference Include="Microsoft.SqlServer.Management.Common" />
-    <Reference Include="Microsoft.SqlServer.Smo" />
-    <Reference Include="Microsoft.AnalysisServices.AdomdClient" />
-    <Reference Include="Microsoft.SqlServer.TransactSql.ScriptDom" />
+    <!-- SQL Server / SSMS NuGet Packages -->
+    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="181.19.0" />
+    <PackageReference Include="Microsoft.SqlServer.TransactSql.ScriptDom" Version="180.6.0" />
+    <PackageReference Include="Microsoft.AnalysisServices.AdomdClient" Version="19.113.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Testing Packages -->
+    <PackageReference Include="xunit" Version="2.6.6" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

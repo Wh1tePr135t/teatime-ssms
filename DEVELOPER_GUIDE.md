@@ -100,7 +100,7 @@ The IntelliSenseProvider analyzes the SQL code to determine what type of complet
 
 - Visual Studio 2019 or later (for SSMS compatibility)
 - SQL Server Management Studio 18.0 or later
-- .NET Framework 4.7.2 or .NET 5.0+
+- .NET Framework 4.8.1 or .NET 5.0+
 - C# knowledge
 
 ### Setup Steps

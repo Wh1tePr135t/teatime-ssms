@@ -84,7 +84,7 @@ namespace TEATime.Tests
 
             // Assert
             Assert.NotEmpty(results);
-            Assert.Any(results, r => r.Type == CompletionType.Table);
+            Assert.Contains(results, r => r.Type == CompletionType.Table);
         }
 
         [Fact]
@@ -179,7 +179,7 @@ namespace TEATime.Tests
             var results = _provider.GetCompletions(query, position, "master");
 
             // Assert
-            Assert.Any(results, r => r.Type == CompletionType.Snippet && r.DisplayText.Contains("SELECT"));
+            Assert.Contains(results, r => r.Type == CompletionType.Snippet && r.DisplayText.Contains("SELECT"));
         }
 
         [Fact]
@@ -193,7 +193,7 @@ namespace TEATime.Tests
             var results = _provider.GetCompletions(query, position, "master");
 
             // Assert
-            Assert.Any(results, r => r.Type == CompletionType.Snippet && r.DisplayText.Contains("UPDATE"));
+            Assert.Contains(results, r => r.Type == CompletionType.Snippet && r.DisplayText.Contains("UPDATE"));
         }
 
         [Fact]
@@ -207,7 +207,7 @@ namespace TEATime.Tests
             var results = _provider.GetCompletions(query, position, "master");
 
             // Assert
-            Assert.Any(results, r => r.Type == CompletionType.Snippet && r.DisplayText.Contains("CTE"));
+            Assert.Contains(results, r => r.Type == CompletionType.Snippet && r.DisplayText.Contains("CTE"));
         }
 
         #endregion
@@ -375,7 +375,7 @@ namespace TEATime.Tests
 
             // Assert
             Assert.NotEmpty(results);
-            Assert.Any(results, r => r.DisplayText.Contains("SELECT"));
+            Assert.Contains(results, r => r.DisplayText.Contains("SELECT"));
         }
 
         [Fact]
@@ -424,7 +424,7 @@ namespace TEATime.Tests
 
             // Assert
             Assert.NotEmpty(results);
-            Assert.Any(results, r => r.DisplayText.Contains(expectedKeyword));
+            Assert.Contains(results, r => r.DisplayText.Contains(expectedKeyword));
         }
     }
 
@@ -515,7 +515,7 @@ namespace TEATime.Tests
 
             // Step 1: Type "SELECT"
             var step1 = provider.GetCompletions("SEL", 3, "master");
-            Assert.Any(step1, r => r.DisplayText == "SELECT");
+            Assert.Contains(step1, r => r.DisplayText == "SELECT");
 
             // Step 2: After SELECT, type table name
             var step2 = provider.GetCompletions("SELECT * FROM Us", 17, "master");
@@ -548,15 +548,15 @@ namespace TEATime.Tests
 
             // 1. Get keyword suggestion
             var keywords = provider.GetCompletions("CASE", 4, "master");
-            Assert.Any(keywords, r => r.DisplayText == "CASE");
+            Assert.Contains(keywords, r => r.DisplayText == "CASE");
 
             // 2. Get keyword suggestion for function
             var functions = provider.GetCompletions("COUNT", 5, "master");
-            Assert.Any(functions, r => r.Type == CompletionType.Function);
+            Assert.Contains(functions, r => r.Type == CompletionType.Function);
 
             // 3. Get snippet for complex pattern
             var snippets = provider.GetCompletions("tx", 2, "master");
-            Assert.Any(snippets, r => r.Type == CompletionType.Snippet);
+            Assert.Contains(snippets, r => r.Type == CompletionType.Snippet);
         }
     }
 }
