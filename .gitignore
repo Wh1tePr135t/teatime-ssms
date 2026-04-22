@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+*.suo
+*.user
+*.dll
+*.exe
+.DS_Store
+node_modeules/
