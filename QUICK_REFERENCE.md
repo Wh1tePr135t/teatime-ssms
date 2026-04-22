@@ -292,7 +292,7 @@ private int CalculateRelevance(string suggestion, string prefix)
 ### Change SSMS GUID
 ```csharp
 // TEATimePackage.cs
-[Guid("A1B2C3D4-E5F6-47A8-9B0C-1D2E3F4A5B6C")] // Change this
+[Guid("7DDEDD0D-028B-422C-B4B8-0377801ACFE5")] // Change this
 ```
 
 ---

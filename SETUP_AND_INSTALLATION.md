@@ -138,7 +138,7 @@ For SSMS to load your extension, you need to register it in the Windows Registry
 
 4. **Create New Key**:
    - Right-click → New → Key
-   - Name: Your GUID (e.g., `{A1B2C3D4-E5F6-47A8-9B0C-1D2E3F4A5B6C}`)
+   - Name: Your GUID (e.g., `{7DDEDD0D-028B-422C-B4B8-0377801ACFE5}`)
 
 5. **Set Registry Values**:
    - Right-click the new key → New → String Value
@@ -160,7 +160,7 @@ Create a `.reg` file with your GUID and DLL path:
 ```reg
 Windows Registry Editor Version 5.00
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Management Studio\19.0\Packages\{A1B2C3D4-E5F6-47A8-9B0C-1D2E3F4A5B6C}]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Management Studio\19.0\Packages\{7DDEDD0D-028B-422C-B4B8-0377801ACFE5}]
 @="TEATime"
 "InprocServer32"="C:\\projects\\teatime-ssms\\bin\\Debug\\TEATime.dll"
 "Class"="TEATime.TEATimePackage"

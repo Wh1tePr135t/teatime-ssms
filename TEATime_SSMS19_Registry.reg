@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Management Studio\19\Packages\{7DDEDD0D-028B-422C-B4B8-0377801ACFE5}]
+@="TEATime"
+"InprocServer32"="E:\\Work\\TEA\\TeaTime\\teatime-ssms\\bin\\Debug\\net481\\TEATime.dll"
+"Class"="TEATime.TEATimePackage"

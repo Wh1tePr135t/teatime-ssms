@@ -148,7 +148,7 @@ The IntelliSenseProvider analyzes the SQL code to determine what type of complet
 For SSMS to load your extension, add registry entries:
 
 ```reg
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Management Studio\[Version]\Packages\{A1B2C3D4-E5F6-47A8-9B0C-1D2E3F4A5B6C}]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Management Studio\[Version]\Packages\{{7DDEDD0D-028B-422C-B4B8-0377801ACFE5}}]
 @="TEATime"
 "InprocServer32"="[Path to your DLL]"
 "Class"="TEATime.TEATimePackage"
